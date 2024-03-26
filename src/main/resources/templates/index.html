@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>PAGINA DE INICIO</h2>
+        <p th:text ="${mensaje}"></p>
+        <p th:text ="${dato}"></p>
+        <hr>
+        <b>CEDULA: </b><span th:text = "${alguien.cedula}"></span><br>
+        <b>CLAVE: </b><span th:text ="${alguien.clave}"></span><br>
+        <b>NOMBRE: </b><span th:text = "${alguien.nombre}"></span><br>
+        <b>EMAIL: </b><span th:text = "${alguien.email}"></span><br>
+       
+        <hr>
+        <h4>LISTA DE PERSONAS</h4>
+        <hr>
+        
+        <div th:if ="${Usuario != null and !Usuario.empty}">
+            <table border = "1">
+                <tr>
+                    <th>CEDULA</th>
+                    <th>CLAVE</th>
+                    <th>NOMBRE</th>
+                    <th>EMAIL</th>
+                </tr>  
+              <!--   
+                <tr th:each ="u:${Usuario}">
+                    <td th: text ="${u.cedula}"></td>
+                    <td th: text ="${u.clave}"></td>
+                    <td th: text ="${u.nombre}"></td>
+                    <td th: text ="${u.email}"></td>
+                </tr>  
+          -->    
+        </div>
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
